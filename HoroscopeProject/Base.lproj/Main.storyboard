@@ -1,24 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FXv-e6-Fle">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoadingVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoadingVC" customModule="HoroscopeProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starry_sky" translatesAutoresizingMaskIntoConstraints="NO" id="5dq-rC-cs0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="5dq-rC-cs0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4jp-Rm-jVE"/>
+                            <constraint firstItem="5dq-rC-cs0" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="7w4-3U-uHx"/>
+                            <constraint firstItem="5dq-rC-cs0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="C92-cL-Jfv"/>
+                            <constraint firstItem="5dq-rC-cs0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Cmh-PT-Xu8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Mmw-Bg-LV7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="680" y="123"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="Ysf-Hy-xLB">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" id="dIa-p9-xKh" customClass="MainVC" customModule="HoroscopeProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rhZ-Iq-wtn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OYM-ez-wx9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ParallaxCell" rowHeight="146" id="3Vb-kL-tpn" customClass="ParallaxCell" customModule="HoroscopeProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="146"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Vb-kL-tpn" id="7tb-Hb-7I4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="145.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aR4-fK-WYn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="175.5"/>
+                                                </imageView>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWE-ke-oGP">
+                                                    <rect key="frame" x="334.5" y="70.5" width="69.5" height="33.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                                    <color key="textColor" red="0.8372950504480865" green="0.74786554329237442" blue="0.17547333596963635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="1"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="aR4-fK-WYn" secondAttribute="bottom" constant="-30" id="AaF-LL-pNQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="gWE-ke-oGP" secondAttribute="trailing" constant="10" id="YKR-m7-rWE"/>
+                                                <constraint firstItem="aR4-fK-WYn" firstAttribute="leading" secondItem="7tb-Hb-7I4" secondAttribute="leading" id="dyz-rE-Mbu"/>
+                                                <constraint firstItem="gWE-ke-oGP" firstAttribute="centerY" secondItem="7tb-Hb-7I4" secondAttribute="centerY" multiplier="1.2" id="fSO-lS-Nu1"/>
+                                                <constraint firstAttribute="trailing" secondItem="aR4-fK-WYn" secondAttribute="trailing" id="guH-ug-xgQ"/>
+                                                <constraint firstItem="aR4-fK-WYn" firstAttribute="top" secondItem="7tb-Hb-7I4" secondAttribute="top" id="pKv-KC-Fvx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="ParallaxCell" label="ParallaxCell">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <connections>
+                                            <outlet property="cellImageView" destination="aR4-fK-WYn" id="WdZ-Gf-IaA"/>
+                                            <outlet property="titleLabel" destination="gWE-ke-oGP" id="Gsh-1V-slv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dIa-p9-xKh" id="5dT-Zc-yvP"/>
+                                    <outlet property="delegate" destination="dIa-p9-xKh" id="EbK-Ni-Gcb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OYM-ez-wx9" secondAttribute="bottom" id="CpW-r9-rYF"/>
+                            <constraint firstItem="siu-h6-XSn" firstAttribute="trailing" secondItem="OYM-ez-wx9" secondAttribute="trailing" id="Ota-3s-TRW"/>
+                            <constraint firstItem="OYM-ez-wx9" firstAttribute="top" secondItem="siu-h6-XSn" secondAttribute="top" id="gXu-md-3av"/>
+                            <constraint firstItem="OYM-ez-wx9" firstAttribute="leading" secondItem="siu-h6-XSn" secondAttribute="leading" id="tgV-VK-a8H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="siu-h6-XSn"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="OYM-ez-wx9" id="qK8-6z-saf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZN6-Hh-LKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1394" y="123"/>
+        </scene>
+        <!--DescriptionVC-->
+        <scene sceneID="LnI-iY-Kws">
+            <objects>
+                <viewController storyboardIdentifier="DescriptionVC" id="cxD-Cl-Ysz" customClass="DescriptionVC" customModule="HoroscopeProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o5X-4J-ya8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="brC-qQ-5u8">
+                                <rect key="frame" x="0.0" y="313" width="414" height="549"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgg-hS-yNs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="269"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dvh-4r-3lG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="269"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dvh-4r-3lG" secondAttribute="bottom" constant="1" id="BvP-tG-LDl"/>
+                                    <constraint firstItem="dvh-4r-3lG" firstAttribute="centerX" secondItem="qgg-hS-yNs" secondAttribute="centerX" id="DT2-Fr-Lm0"/>
+                                    <constraint firstAttribute="trailing" secondItem="dvh-4r-3lG" secondAttribute="trailing" id="Kx8-aF-INs"/>
+                                    <constraint firstItem="dvh-4r-3lG" firstAttribute="leading" secondItem="qgg-hS-yNs" secondAttribute="leading" id="LPM-KT-dKi"/>
+                                    <constraint firstItem="dvh-4r-3lG" firstAttribute="centerY" secondItem="qgg-hS-yNs" secondAttribute="centerY" id="PNV-09-Paj"/>
+                                    <constraint firstItem="dvh-4r-3lG" firstAttribute="top" secondItem="qgg-hS-yNs" secondAttribute="top" id="ZGc-x1-z5o"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZJc-yY-Ul9" firstAttribute="bottom" secondItem="brC-qQ-5u8" secondAttribute="bottom" id="1BK-1k-cwN"/>
+                            <constraint firstItem="qgg-hS-yNs" firstAttribute="height" secondItem="o5X-4J-ya8" secondAttribute="height" multiplier="0.3" id="1iL-dC-bNQ"/>
+                            <constraint firstItem="brC-qQ-5u8" firstAttribute="centerX" secondItem="o5X-4J-ya8" secondAttribute="centerX" id="9ud-tw-aFA"/>
+                            <constraint firstItem="brC-qQ-5u8" firstAttribute="leading" secondItem="ZJc-yY-Ul9" secondAttribute="leading" id="DWT-Yx-6LG"/>
+                            <constraint firstItem="qgg-hS-yNs" firstAttribute="width" secondItem="o5X-4J-ya8" secondAttribute="width" id="EDM-3b-HV0"/>
+                            <constraint firstItem="qgg-hS-yNs" firstAttribute="trailing" secondItem="ZJc-yY-Ul9" secondAttribute="trailing" id="Jaa-DA-dDZ"/>
+                            <constraint firstItem="brC-qQ-5u8" firstAttribute="trailing" secondItem="ZJc-yY-Ul9" secondAttribute="trailing" id="Rrb-4G-TWX"/>
+                            <constraint firstItem="qgg-hS-yNs" firstAttribute="leading" secondItem="ZJc-yY-Ul9" secondAttribute="leading" id="UQX-nA-Jwe"/>
+                            <constraint firstItem="qgg-hS-yNs" firstAttribute="top" secondItem="ZJc-yY-Ul9" secondAttribute="top" id="iis-xh-0z6"/>
+                            <constraint firstItem="brC-qQ-5u8" firstAttribute="top" secondItem="qgg-hS-yNs" secondAttribute="bottom" id="vbt-If-huf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZJc-yY-Ul9"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="dvh-4r-3lG" id="Hn3-Cx-xB3"/>
+                        <outlet property="scrollView" destination="qgg-hS-yNs" id="Zoh-bR-TG1"/>
+                        <outlet property="textView" destination="brC-qQ-5u8" id="nvG-P7-bOs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o7W-Ts-GZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2077" y="123"/>
+        </scene>
+        <!--Main NaviVC-->
+        <scene sceneID="uzS-GQ-WTG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FXv-e6-Fle" customClass="MainNaviVC" customModule="HoroscopeProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" autoresizesSubviews="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TC2-uG-PDU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Dy4-xS-Pso"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="17O-vS-04c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72" y="124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="starry_sky" width="1920" height="1080"/>
+    </resources>
 </document>

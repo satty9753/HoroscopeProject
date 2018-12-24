@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32DCC95421C8881C00F4B3EF /* ZoomInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DCC95321C8881C00F4B3EF /* ZoomInPresentationManager.swift */; };
+		32DCC95621C8890500F4B3EF /* ZoomInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DCC95521C8890500F4B3EF /* ZoomInPresentationAnimator.swift */; };
 		32FA774E21C73EA000B2CCD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA774D21C73EA000B2CCD2 /* AppDelegate.swift */; };
-		32FA775021C73EA000B2CCD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA774F21C73EA000B2CCD2 /* ViewController.swift */; };
 		32FA775321C73EA000B2CCD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32FA775121C73EA000B2CCD2 /* Main.storyboard */; };
 		32FA775521C73EA200B2CCD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32FA775421C73EA200B2CCD2 /* Assets.xcassets */; };
 		32FA775821C73EA200B2CCD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32FA775621C73EA200B2CCD2 /* LaunchScreen.storyboard */; };
 		32FA776321C73EA300B2CCD2 /* HoroscopeProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA776221C73EA300B2CCD2 /* HoroscopeProjectTests.swift */; };
 		32FA776E21C73EA300B2CCD2 /* HoroscopeProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA776D21C73EA300B2CCD2 /* HoroscopeProjectUITests.swift */; };
+		32FA777C21C73FB700B2CCD2 /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA777B21C73FB700B2CCD2 /* Horoscope.swift */; };
+		32FA777F21C7402A00B2CCD2 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA777E21C7402A00B2CCD2 /* LoadingVC.swift */; };
+		32FA778221C7406B00B2CCD2 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA778121C7406B00B2CCD2 /* MainVC.swift */; };
+		32FA778621C7430300B2CCD2 /* HoroscopeDescription.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32FA778521C7430300B2CCD2 /* HoroscopeDescription.plist */; };
+		32FA778821C7431C00B2CCD2 /* DescriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA778721C7431C00B2CCD2 /* DescriptionVC.swift */; };
+		32FA778A21C773D400B2CCD2 /* HoroscopeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA778921C773D400B2CCD2 /* HoroscopeDataStore.swift */; };
+		32FA778C21C7780000B2CCD2 /* ParallaxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA778B21C7780000B2CCD2 /* ParallaxCell.swift */; };
+		32FA778E21C7864000B2CCD2 /* MainNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA778D21C7864000B2CCD2 /* MainNaviVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32DCC95321C8881C00F4B3EF /* ZoomInPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomInPresentationManager.swift; sourceTree = "<group>"; };
+		32DCC95521C8890500F4B3EF /* ZoomInPresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomInPresentationAnimator.swift; sourceTree = "<group>"; };
 		32FA774A21C73EA000B2CCD2 /* HoroscopeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoroscopeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32FA774D21C73EA000B2CCD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		32FA774F21C73EA000B2CCD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		32FA775221C73EA000B2CCD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		32FA775421C73EA200B2CCD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32FA775721C73EA200B2CCD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +57,14 @@
 		32FA776921C73EA300B2CCD2 /* HoroscopeProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoroscopeProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32FA776D21C73EA300B2CCD2 /* HoroscopeProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeProjectUITests.swift; sourceTree = "<group>"; };
 		32FA776F21C73EA300B2CCD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32FA777B21C73FB700B2CCD2 /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
+		32FA777E21C7402A00B2CCD2 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
+		32FA778121C7406B00B2CCD2 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		32FA778521C7430300B2CCD2 /* HoroscopeDescription.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HoroscopeDescription.plist; sourceTree = "<group>"; };
+		32FA778721C7431C00B2CCD2 /* DescriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionVC.swift; sourceTree = "<group>"; };
+		32FA778921C773D400B2CCD2 /* HoroscopeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeDataStore.swift; sourceTree = "<group>"; };
+		32FA778B21C7780000B2CCD2 /* ParallaxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCell.swift; sourceTree = "<group>"; };
+		32FA778D21C7864000B2CCD2 /* MainNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNaviVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32DCC95021C8879A00F4B3EF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				32DCC95321C8881C00F4B3EF /* ZoomInPresentationManager.swift */,
+				32DCC95521C8890500F4B3EF /* ZoomInPresentationAnimator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		32FA774121C73EA000B2CCD2 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +124,15 @@
 		32FA774C21C73EA000B2CCD2 /* HoroscopeProject */ = {
 			isa = PBXGroup;
 			children = (
+				32DCC95021C8879A00F4B3EF /* Presentation */,
 				32FA774D21C73EA000B2CCD2 /* AppDelegate.swift */,
-				32FA774F21C73EA000B2CCD2 /* ViewController.swift */,
 				32FA775121C73EA000B2CCD2 /* Main.storyboard */,
+				32FA777D21C73FC400B2CCD2 /* Model */,
 				32FA775421C73EA200B2CCD2 /* Assets.xcassets */,
 				32FA775621C73EA200B2CCD2 /* LaunchScreen.storyboard */,
 				32FA775921C73EA200B2CCD2 /* Info.plist */,
+				32FA778021C7403B00B2CCD2 /* Controller */,
+				32FA778F21C7AD1600B2CCD2 /* View */,
 			);
 			path = HoroscopeProject;
 			sourceTree = "<group>";
@@ -123,6 +153,35 @@
 				32FA776F21C73EA300B2CCD2 /* Info.plist */,
 			);
 			path = HoroscopeProjectUITests;
+			sourceTree = "<group>";
+		};
+		32FA777D21C73FC400B2CCD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				32FA777B21C73FB700B2CCD2 /* Horoscope.swift */,
+				32FA778921C773D400B2CCD2 /* HoroscopeDataStore.swift */,
+				32FA778521C7430300B2CCD2 /* HoroscopeDescription.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		32FA778021C7403B00B2CCD2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				32FA778D21C7864000B2CCD2 /* MainNaviVC.swift */,
+				32FA777E21C7402A00B2CCD2 /* LoadingVC.swift */,
+				32FA778121C7406B00B2CCD2 /* MainVC.swift */,
+				32FA778721C7431C00B2CCD2 /* DescriptionVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		32FA778F21C7AD1600B2CCD2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32FA778B21C7780000B2CCD2 /* ParallaxCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +290,7 @@
 			files = (
 				32FA775821C73EA200B2CCD2 /* LaunchScreen.storyboard in Resources */,
 				32FA775521C73EA200B2CCD2 /* Assets.xcassets in Resources */,
+				32FA778621C7430300B2CCD2 /* HoroscopeDescription.plist in Resources */,
 				32FA775321C73EA000B2CCD2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +316,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32FA775021C73EA000B2CCD2 /* ViewController.swift in Sources */,
 				32FA774E21C73EA000B2CCD2 /* AppDelegate.swift in Sources */,
+				32FA778221C7406B00B2CCD2 /* MainVC.swift in Sources */,
+				32FA778A21C773D400B2CCD2 /* HoroscopeDataStore.swift in Sources */,
+				32FA777C21C73FB700B2CCD2 /* Horoscope.swift in Sources */,
+				32FA777F21C7402A00B2CCD2 /* LoadingVC.swift in Sources */,
+				32FA778C21C7780000B2CCD2 /* ParallaxCell.swift in Sources */,
+				32DCC95421C8881C00F4B3EF /* ZoomInPresentationManager.swift in Sources */,
+				32DCC95621C8890500F4B3EF /* ZoomInPresentationAnimator.swift in Sources */,
+				32FA778821C7431C00B2CCD2 /* DescriptionVC.swift in Sources */,
+				32FA778E21C7864000B2CCD2 /* MainNaviVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z45W34X9G;
 				INFOPLIST_FILE = HoroscopeProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +522,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z45W34X9G;
 				INFOPLIST_FILE = HoroscopeProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
