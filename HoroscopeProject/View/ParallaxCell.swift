@@ -13,6 +13,8 @@ class ParallaxCell: UITableViewCell{
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    var parallaxPosition:CGRect!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,26 +28,34 @@ class ParallaxCell: UITableViewCell{
     
     func changeImagePosition(tableView:UITableView, didscrollView view:UIView){
         //convert coordinate to view
-        let rectInSuperView = tableView.convert(self.frame, to: view)
+//        let rectInSuperView = tableView.convert(self.frame, to: view)
         
-        //the distance between cellCenter to superviewCenter
-        let distanceFromCenter = view.frame.height / 2 - rectInSuperView.midY
-        
-        //the distance between imageView and cell height
         let parallaxHeight = cellImageView.frame.height - self.frame.height
         
-        let move = (distanceFromCenter/view.frame.height) * parallaxHeight
 
+        //the distance between cellCenter to superviewCenter
+//        let distanceFromCenter = view.frame.height / 2 - rectInSuperView.midY
+        
+        //the distance between imageView and cell height
+       
+        var heightRate = tableView.contentSize.height / tableView.frame.height
+        
+        print(heightRate)
+        
+        //let move = (distanceFromCenter/self.frame.height) * parallaxHeight
+        let move = (tableView.contentOffset.y / tableView.frame.height) * parallaxHeight
+        
         var imageRect = cellImageView.frame
         
-        imageRect.origin.y = -(parallaxHeight/2) + move
-
+        if heightRate > 2.0 {
+            heightRate -= 1.0
+        }
+        
+        imageRect.origin.y = -parallaxHeight + move / CGFloat(Int(heightRate))
+    
+        
         cellImageView.frame = imageRect
         
-        
-        
     }
-    
-
 
 }

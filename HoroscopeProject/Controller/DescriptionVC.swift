@@ -37,7 +37,6 @@ class DescriptionVC: UIViewController {
     
     private func setUpScrollView(){
         scrollView.bounces = true
-        scrollView.zoomScale = 1.0
         scrollView.maximumZoomScale = 1.1
         scrollView.bouncesZoom = true
         scrollView.isScrollEnabled = false

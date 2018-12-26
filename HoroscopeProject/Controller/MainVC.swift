@@ -19,7 +19,6 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-
     }
 
     /*
@@ -35,7 +34,7 @@ class MainVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        scrollViewDidScroll(tableView)
+//        scrollViewDidScroll(tableView)
     }
     
     

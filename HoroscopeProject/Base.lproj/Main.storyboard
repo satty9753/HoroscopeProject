@@ -56,7 +56,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aR4-fK-WYn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="175.5"/>
+                                                    <rect key="frame" x="0.0" y="-30" width="414" height="175.5"/>
                                                 </imageView>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWE-ke-oGP">
                                                     <rect key="frame" x="334.5" y="70.5" width="69.5" height="33.5"/>
@@ -67,12 +67,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="aR4-fK-WYn" secondAttribute="bottom" constant="-30" id="AaF-LL-pNQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="aR4-fK-WYn" secondAttribute="bottom" id="AaF-LL-pNQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="gWE-ke-oGP" secondAttribute="trailing" constant="10" id="YKR-m7-rWE"/>
                                                 <constraint firstItem="aR4-fK-WYn" firstAttribute="leading" secondItem="7tb-Hb-7I4" secondAttribute="leading" id="dyz-rE-Mbu"/>
                                                 <constraint firstItem="gWE-ke-oGP" firstAttribute="centerY" secondItem="7tb-Hb-7I4" secondAttribute="centerY" multiplier="1.2" id="fSO-lS-Nu1"/>
                                                 <constraint firstAttribute="trailing" secondItem="aR4-fK-WYn" secondAttribute="trailing" id="guH-ug-xgQ"/>
-                                                <constraint firstItem="aR4-fK-WYn" firstAttribute="top" secondItem="7tb-Hb-7I4" secondAttribute="top" id="pKv-KC-Fvx"/>
+                                                <constraint firstItem="aR4-fK-WYn" firstAttribute="top" secondItem="7tb-Hb-7I4" secondAttribute="top" constant="-30" id="pKv-KC-Fvx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration" identifier="ParallaxCell" label="ParallaxCell">
