@@ -70,7 +70,6 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let descriptionVC = self.storyboard?.instantiateViewController(withIdentifier: "DescriptionVC") as? DescriptionVC
         descriptionVC?.horoscope = horoscopes[indexPath.row]
     
@@ -88,7 +87,6 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource{
         //transition animation
         zoomInPresentationDelegate = ZoomInPresentationManager(toFrame: nextVCImageViewFrame, fromFrame: rectInScreen, image: (cell!.cellImageView?.image)!)
         self.navigationController?.delegate = zoomInPresentationDelegate
-
         self.navigationController?.pushViewController(descriptionVC!, animated: true)
     }
     

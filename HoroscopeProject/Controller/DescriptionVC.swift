@@ -37,7 +37,7 @@ class DescriptionVC: UIViewController {
     
     private func setUpScrollView(){
         scrollView.bounces = true
-        scrollView.maximumZoomScale = 1.1
+        scrollView.maximumZoomScale = 1.05
         scrollView.bouncesZoom = true
         scrollView.isScrollEnabled = false
         scrollView.delegate = self
@@ -75,13 +75,13 @@ extension DescriptionVC: UIScrollViewDelegate{
         
     }
     
-    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
-        
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        
-        scrollView.frame = CGRect(origin:CGPoint(x: 0, y: statusBarHeight+self.navigationController!.navigationBar.frame.height), size: CGSize(width: self.view.frame.width, height: view!.frame.height))
-        
-    }
+//    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+//
+//        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+//
+//        scrollView.frame = CGRect(origin:CGPoint(x: 0, y: statusBarHeight+self.navigationController!.navigationBar.frame.height), size: CGSize(width: self.view.frame.width, height: view!.frame.height))
+//
+//    }
     
 }
 

@@ -49,7 +49,7 @@ class LoadingVC: UIViewController {
         scrollView.backgroundColor = .clear
         self.view.addSubview(scrollView)
         
-        scrollView.contentSize = CGSize(width: scrollView.frame.width * 12, height: scrollView.frame.height)
+        scrollView.contentSize = CGSize(width: scrollView.frame.width * CGFloat(data.horoscopes.count), height: scrollView.frame.height)
         scrollView.isUserInteractionEnabled = false
         scrollView.isScrollEnabled = true
     

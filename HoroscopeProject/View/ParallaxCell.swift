@@ -29,30 +29,36 @@ class ParallaxCell: UITableViewCell{
     func changeImagePosition(tableView:UITableView, didscrollView view:UIView){
         //convert coordinate to view
 //        let rectInSuperView = tableView.convert(self.frame, to: view)
-        
+//
+//        //the distance between cellCenter to superviewCenter
+//        let distanceFromCenter = view.frame.height / 2 - rectInSuperView.midY
+//
+//        //the distance between imageView and cell height
+//        let parallaxHeight = cellImageView.frame.height - self.frame.height
+//
+//        let move = (distanceFromCenter/self.frame.height) * parallaxHeight
+//
+//        var imageRect = cellImageView.frame
+//        
+//        imageRect.origin.y = -parallaxHeight/2 + move
+//
+//        cellImageView.frame = imageRect
+    
         let parallaxHeight = cellImageView.frame.height - self.frame.height
         
+        var maxScrollDistance: CGFloat!
 
-        //the distance between cellCenter to superviewCenter
-//        let distanceFromCenter = view.frame.height / 2 - rectInSuperView.midY
-        
-        //the distance between imageView and cell height
-       
-        var heightRate = tableView.contentSize.height / tableView.frame.height
-        
-        print(heightRate)
-        
-        //let move = (distanceFromCenter/self.frame.height) * parallaxHeight
-        let move = (tableView.contentOffset.y / tableView.frame.height) * parallaxHeight
-        
-        var imageRect = cellImageView.frame
-        
-        if heightRate > 2.0 {
-            heightRate -= 1.0
+        if tableView.contentSize.height > tableView.frame.height{
+             maxScrollDistance = tableView.contentSize.height - tableView.frame.height
+        }else{
+             maxScrollDistance = tableView.contentSize.height
         }
-        
-        imageRect.origin.y = -parallaxHeight + move / CGFloat(Int(heightRate))
+
+        let move = (tableView.contentOffset.y / maxScrollDistance) * parallaxHeight
+       
+        var imageRect = cellImageView.frame
     
+        imageRect.origin.y = -parallaxHeight + move
         
         cellImageView.frame = imageRect
         
