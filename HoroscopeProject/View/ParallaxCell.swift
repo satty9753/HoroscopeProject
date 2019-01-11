@@ -27,7 +27,7 @@ class ParallaxCell: UITableViewCell{
     }
     
     func changeImagePosition(tableView:UITableView, didscrollView view:UIView){
-        //convert coordinate to view
+//        //convert coordinate to view
 //        let rectInSuperView = tableView.convert(self.frame, to: view)
 //
 //        //the distance between cellCenter to superviewCenter
@@ -39,13 +39,13 @@ class ParallaxCell: UITableViewCell{
 //        let move = (distanceFromCenter/self.frame.height) * parallaxHeight
 //
 //        var imageRect = cellImageView.frame
-//        
+//
 //        imageRect.origin.y = -parallaxHeight/2 + move
 //
 //        cellImageView.frame = imageRect
     
         let parallaxHeight = cellImageView.frame.height - self.frame.height
-        
+
         var maxScrollDistance: CGFloat!
 
         if tableView.contentSize.height > tableView.frame.height{
@@ -55,11 +55,11 @@ class ParallaxCell: UITableViewCell{
         }
 
         let move = (tableView.contentOffset.y / maxScrollDistance) * parallaxHeight
-       
+
         var imageRect = cellImageView.frame
-    
+
         imageRect.origin.y = -parallaxHeight + move
-        
+
         cellImageView.frame = imageRect
         
     }
